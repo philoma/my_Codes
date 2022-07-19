@@ -42,7 +42,7 @@ public:
 
             //dont push it back again 
             else{
-                posy.push_back(it.first->val);
+                posy.push_back(it.first->val) ;
             }
         }
 
