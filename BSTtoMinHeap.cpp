@@ -14,8 +14,8 @@ void convertInToPre(BinaryTreeNode* root,vector<int> &arr,int &i)
     if(root==NULL)
         return;
     root->data = arr[i++];
-    convert(root->left,arr,i);
-    convert(root->right,arr,i);
+    convertInToPre(root->left,arr,i);
+    convertInToPre(root->right,arr,i);
 }
 BinaryTreeNode* convertBST(BinaryTreeNode* root)
 {
