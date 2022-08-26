@@ -77,4 +77,35 @@ int maximumNonAdjacentSum(vector<int> &nums){
     return solve(nums);
 }
 
+
+
+
+
+
+
+
+
+
+//Optimizing space
+
+int solve(vector<int> &nums){
+    int n=nums.size();
+     int prev2=0;
+    int prev1=nums[0];
+    for(int i=1;i<n;i++){
+        int inc=prev2+nums[i];
+        int excl=prev1+0;
+        int ans=max(inc, excl);
+        
+        //jab i aage badhta he to
+        prev2=prev1;
+        prev1=ans;
+                  }
+    return prev1;
+     }
+int maximumNonAdjacentSum(vector<int> &nums){
+    // Write your code here.
+    return solve(nums);
+}
+
 //link: https://www.codingninjas.com/codestudio/problems/maximum-sum-of-non-adjacent-elements_843261?leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar
