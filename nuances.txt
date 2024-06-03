@@ -1,1 +1,2 @@
    a x b = LCM(a, b) * GCD (a, b)
+the number of digits in the given number = to_string(num).length();
